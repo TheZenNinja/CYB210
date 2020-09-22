@@ -1,3 +1,21 @@
 4.1
+myList = [7,9,"a", "cat", False]
+
 4.2
+a
+myList.append(3.14)
+myList.append(7)
+b
+myList.insert(2, "dog")
+c
+myList.index("cat")
+d
+myList.count(7)
+e
+myList.remove(7)
+f
+myList.pop(myList.index("dog"))
+
 4.3
+fox = "the quick brown fox"
+fox.split(" ")
