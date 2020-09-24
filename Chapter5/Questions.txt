@@ -1,0 +1,5 @@
+5.12
+import urllib.request as req
+page = req.urlopen("https://www.youtube.com")
+text = page.read().decode("utf-8")
+print(text)
