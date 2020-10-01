@@ -1,11 +1,12 @@
 import urllib.request as req
-def SavePage(url):
+def SavePage(fileName, url):
     page = req.urlopen(url)
-    file = open("Saved Website.txt", "w")
+    file = open((fileName + ".txt"), "w")
     line = page.readline().decode("utf-8")
     while line != "":
         file.write(line + "\n")
         line = page.readline().decode("utf-8")
     file.close()
+    print("Finished")
 
-SavePage("http://help.websiteos.com/websiteos/example_of_a_simple_html_page.htm")
+SavePage("Saved Site", "http://help.websiteos.com/websiteos/example_of_a_simple_html_page.htm")
