@@ -1,0 +1,6 @@
+What were the decryption results for each line?
+Were you able to decrypt every line? 
+	Which lines?
+	What might be a reason why these lines didn't decrypt?
+Were there any lines which were partially decrypted? 
+	If so, can you guess at the actual text?
