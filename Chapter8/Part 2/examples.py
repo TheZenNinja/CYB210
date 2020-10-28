@@ -17,5 +17,21 @@ def removeMatches(text, toRemove):
         if l not in toRemove:
             newTxt += l;
     return newTxt
+def neighborCount(text):
+    nbDict = {}
+    text = text.lower ()
+    for i in range(len(text) -1):
+        nbList = nbDict.setdefault(text [i], [])
+        maybeAdd(text [i+1], nbList)
+        nbList = nbDict.setdefault(text [i +1], [])
+        maybeAdd(text [i], nbList)
+    for key in nbDict :
+        nbDict[key] = len(nbDict[key])
+    return nbDict
+def maybeAdd(ch, toList):
+    if ch in 'abcdefghijklmnopqrstuvwxyz' and ch not in toList:
+        toList.append (ch)
+
+
 
 print(letterCountDict("Hello"))
