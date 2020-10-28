@@ -23,6 +23,7 @@ def createNeighborDict(text):
 def maybeAdd(ch, toDict):
     if ch in 'abcdefghijklmnopqrstuvwxyz':
         toDict[ch] = toDict.setdefault(ch, 0) + 1
+
 def plotFrequencyChart(dict, letters):
     letters = letters.lower()
 
@@ -112,3 +113,5 @@ file = open("ch8-ciphertext.txt", "r")
 neighborDict = createNeighborDict(file.read());
 
 plotFrequencyChart(neighborDict, "aetn")
+
+file.close()
