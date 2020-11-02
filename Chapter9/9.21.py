@@ -13,6 +13,9 @@ def drawLS(aTurtle, instructions, angle, distance):
         else :
             print('Error : %s is an unknown command '%cmd)
 
-
+wn = turtle.Screen();
 t = turtle.Turtle()
-drawLS(t, "F-F++F-F-F-F++F-F++F-F++F-F-F-F++F-F",60,20)
+t.speed(10)
+part = "F-F++F-F-F-F++F-F++F-F++F-F-F-F++F-F"
+drawLS(t, part+"-"+part+"++"+part+"-"+part,60,10)
+wn.exitonclick()
